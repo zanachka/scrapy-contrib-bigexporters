@@ -24,15 +24,21 @@ jobs:
           pip install flit==3.12.0
           flit install
       - name: Code formatting
-        run: black --check .  
+        run: |
+          source ./venv/cienv/bin/activate 
+          black --check .  
       - name: Building library
         run: |
+          source ./venv/cienv/bin/activate
           export SOURCE_DATE_EPOCH=$(date +%s)
           flit build
       - name: Code analysis
-        run: prospector --profile .prospector.yaml --zero-exit > ./prospector.json
+        run: |
+          source ./venv/cienv/bin/activate
+          prospector --profile .prospector.yaml --zero-exit > ./prospector.json
       - name: Run unit test
         run: |
+           source ./venv/cienv/bin/activate
            coverage run -m unittest
            coverage report
            coverage json
