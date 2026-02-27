@@ -2,7 +2,8 @@ name: build
 on: [workflow_call]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    container:
+       image: registry.opensuse.org/opensuse/bci/nodejs:latest
     environment: build
     steps:
       - name: Checkout code
@@ -10,10 +11,8 @@ jobs:
         with:
           persist-credentials: false
       - name: Setup Python
-        uses: actions/setup-python@v6
-        with:
-            python-version: '3.12' 
-            architecture: 'x64'
+        run: |
+            zypper in -y python312
       - name: Show Python version
         run: python --version
       - name: Install environment
