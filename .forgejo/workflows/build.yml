@@ -14,10 +14,10 @@ jobs:
         run: |
             zypper in -y python312
       - name: Show Python version
-        run: python --version
+        run: python3 --version
       - name: Install environment
         run: | 
-          pip install flit==3.12.0
+          pip3 install flit==3.12.0
           flit install
       - name: Code formatting
         run: black --check .  
