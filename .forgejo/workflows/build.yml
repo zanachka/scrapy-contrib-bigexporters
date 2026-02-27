@@ -12,7 +12,7 @@ jobs:
           persist-credentials: false
       - name: Setup Python
         run: |
-            zypper in -y python312 pip312
+            zypper in -y python312 python312-pip
       - name: Show Python version
         run: python3.12 --version
       - name: Install environment
