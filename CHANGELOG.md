@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.1.0] - 2026-03-10
 * Added: CI/CD: [Forgejo CI/CD pipeline](.forgejo/workflows/build.yml) for running job on codeberg.org
 * Changed: Update Github Actions
 * Changed: Pyarrow (Orc, Parquet, Iceberg): If schema (for pyarrow to Pandas conversion) is specified then do not auto-interfere Null types. Fixes: https://github.com/ZuInnoTe/scrapy-contrib-bigexporters/issues/10
