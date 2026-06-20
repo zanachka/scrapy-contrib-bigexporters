@@ -115,7 +115,7 @@ Example s3 file, e.g. s3://mybucket/result-quotes-2020-01-01T10-00-00.json::
   }
 There are more storage backends, e.g. Google Cloud. See the documentation linked above. Note: The storage backends supported by Scrapy may differ from the ones supported by Iceberg.
 
-Be aware that you should not static credentials, such as access key and secret key, for accessing cloud resources, such as S3, but machine identities, such as AWS IAM Roles based on short-living tokens. This can be configured easily in Iceberg.
+Be aware that you should not use static credentials, such as access key and secret key, for accessing cloud resources, such as S3, but machine identities, such as AWS IAM Roles based on short-living tokens. This can be configured easily in Iceberg.
 
 The file you specify as filename only stores how many items have been scraped. 
 
