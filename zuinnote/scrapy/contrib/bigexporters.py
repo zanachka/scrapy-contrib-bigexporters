@@ -217,7 +217,7 @@ class ParquetItemExporter(BaseItemExporter):
         """
         row = {}
         fields = dict(
-            self._get_serialized_fields(item, default_value="", include_empty=True)
+            self.get_serialized_fields(item, default_value="", include_empty=True)
         )
         for column in self.columns:
             if self.pq_convertstr == True:
@@ -402,7 +402,7 @@ class AvroItemExporter(BaseItemExporter):
         Returns the columns and values from the item
         """
         fields = dict(
-            self._get_serialized_fields(item, default_value="", include_empty=True)
+            self.get_serialized_fields(item, default_value="", include_empty=True)
         )
         if self.avro_convertstr:
             for column in fields:
@@ -563,7 +563,7 @@ class OrcItemExporter(BaseItemExporter):
         """
         row = {}
         fields = dict(
-            self._get_serialized_fields(item, default_value="", include_empty=True)
+            self.get_serialized_fields(item, default_value="", include_empty=True)
         )
         for column in self.columns:
             if self.orc_convertstr == True:
@@ -753,7 +753,7 @@ class IcebergItemExporter(BaseItemExporter):
         """
         row = {}
         fields = dict(
-            self._get_serialized_fields(item, default_value="", include_empty=True)
+            self.get_serialized_fields(item, default_value="", include_empty=True)
         )
         for column in self.columns:
             if self.convertstr == True:

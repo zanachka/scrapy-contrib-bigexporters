@@ -1,4 +1,4 @@
 pyarrow==22.0.0
-Scrapy==2.13.3
+Scrapy==2.18.0
 scrapy-contrib-bigexporters==1.1.1
 pandas
