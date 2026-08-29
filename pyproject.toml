@@ -1,12 +1,12 @@
 [build-system]
-requires = ["flit_core >=3.10.0,<4"]
+requires = ["flit_core >=4"]
 build-backend = "flit_core.buildapi"
 [project]
 name = "scrapy-contrib-bigexporters"
 authors = [
     {name = "Jörn Franke", email = "oss@zuinnote.eu"},
 ]
-version = "1.1.1"
+version = "1.2.0"
 description = "Scrapy exporter for Big Data formats"
 readme = "README.rst"
 classifiers = ["Development Status :: 5 - Production/Stable",
@@ -35,16 +35,16 @@ iceberg = [
     "pyarrow"
 ]
 parquet = [
-    "pyarrow>=22.0.0",
+    "pyarrow>=25.0.1",
     "pandas"
 ]
 orc = [
-    "pyarrow>=22.0.0",
+    "pyarrow>=25.0.1",
     "pandas"
 ]
 test = [
     "pyiceberg[sql-sqlite]>=0.10",
-    "pyarrow>=22.0.0",
+    "pyarrow>=25.0.1",
     "pandas",
     "coverage>=7.11",
     "tox>=4.32.0",
