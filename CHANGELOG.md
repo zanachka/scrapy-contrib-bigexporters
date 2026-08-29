@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.2.0] - 2026-08-29
 * Added: Upgrade to flit 4.0.2
 * Added: Scrapy >= 2.18.0 is minimal version
-* Added: Upgraded to pyarrow 25.0.1, pyiceberg 0.11.1
+* Added: Upgraded to pyarrow 25.0.1, pyiceberg 0.11.1, fastavro 1.12.2
 * Changed: Forgejo CI/CD pipeline: Update to Python 3.13
 * Changed: Small fix to read the safe schema variable correctly
 
