@@ -1,4 +1,4 @@
-pyiceberg[s3fs,sql-sqlite]==0.10.0
+pyiceberg[s3fs,sql-sqlite]==0.11.1
 pyarrow==25.0.1
 Scrapy==2.18.0
 scrapy-contrib-bigexporters==1.2.0

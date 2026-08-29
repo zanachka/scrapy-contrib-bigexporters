@@ -31,7 +31,7 @@ avro = [
     "fastavro>=1.12.1"
 ]
 iceberg = [
-    "pyiceberg>=0.10.0",
+    "pyiceberg>=0.11.1",
     "pyarrow"
 ]
 parquet = [
@@ -43,7 +43,7 @@ orc = [
     "pandas"
 ]
 test = [
-    "pyiceberg[sql-sqlite]>=0.10",
+    "pyiceberg[sql-sqlite]>=0.11",
     "pyarrow>=25.0.1",
     "pandas",
     "coverage>=7.11",
