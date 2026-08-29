@@ -250,7 +250,7 @@ class ParquetItemExporter(BaseItemExporter):
             # write existing dataframe to parquet file
             if self.pq_schema is not None:
                 table = pyarrow.Table.from_pandas(
-                    self.df, schema=self.pq_schema, safe=pq_pyarrow_safe_schema
+                    self.df, schema=self.pq_schema, safe=self.pq_pyarrow_safe_schema
                 )
             else:
                 table = pyarrow.Table.from_pandas(self.df)
@@ -513,7 +513,7 @@ class OrcItemExporter(BaseItemExporter):
             # write existing dataframe as orc file
             if self.orc_schema is not None:
                 table = pyarrow.Table.from_pandas(
-                    self.df, schema=self.orc_schema, safe=orc_pyarrow_safe_schema
+                    self.df, schema=self.orc_schema, safe=self.orc_pyarrow_safe_schema
                 )
             else:
                 table = pyarrow.Table.from_pandas(self.df)
@@ -787,7 +787,7 @@ class IcebergItemExporter(BaseItemExporter):
             # Convert to arrow
             if self.schema is not None:
                 table = pyarrow.Table.from_pandas(
-                    self.df, schema=self.schema, safe=pyarrow_safe_schema
+                    self.df, schema=self.schema, safe=self.pyarrow_safe_schema
                 )
             else:
                 table = pyarrow.Table.from_pandas(self.df)
